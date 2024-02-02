@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" coreApp="true" package="org.codeaurora.ims" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <protected-broadcast android:name="org.codeaurora.VOIP_VOPS_SSAC_STATUS"/>
+    <protected-broadcast android:name="com.android.internal.intent.action.ACTION_FORBIDDEN_NO_SERVICE_AUTHORIZATION"/>
+    <protected-broadcast android:name="com.qti.phone.action.ACTION_DISABLE_C_IWLAN_NOTIFICATION"/>
+    <protected-broadcast android:name="org.codeaurora.intent.action.PRE_ALERTING_CALL_INFO"/>
+    <protected-broadcast android:name="org.codeaurora.intent.action.SMS_CALLBACK_MODE"/>
+    <protected-broadcast android:name="org.codeaurora.intent.action.MSIM_VOICE_CAPABILITY"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PRECISE_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.CREATE_USERS"/>
+    <uses-permission android:name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="com.qti.permission.DIAG"/>
+    <uses-permission android:name="com.qti.permission.AUDIO"/>
+    <uses-permission android:name="com.qti.permission.RECEIVE_PRE_ALERTING_CALL_INFO"/>
+    <uses-permission android:name="com.qti.permission.RECEIVE_SMS_CALLBACK_MODE"/>
+    <uses-permission android:name="com.qti.permission.RECEIVE_MSIM_VOICE_CAPABILITY"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <permission android:name="com.qti.permission.DIAG" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.qti.permission.AUDIO" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.qti.permission.BIND_QTI_IMS_SERVICE" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.qti.permission.RECEIVE_PRE_ALERTING_CALL_INFO" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.qti.permission.RECEIVE_SMS_CALLBACK_MODE" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.qti.permission.RECEIVE_MSIM_VOICE_CAPABILITY" android:protectionLevel="signatureOrSystem"/>
+    <application android:allowBackup="false" android:directBootAware="true" android:extractNativeLibs="true" android:persistent="true" android:usesNonSdkApi="true">
+        <service android:enabled="true" android:exported="true" android:name=".ImsService" android:permission="android.permission.BIND_IMS_SERVICE" android:singleUser="true">
+            <meta-data android:name="android.telephony.ims.MMTEL_FEATURE" android:value="true"/>
+            <meta-data android:name="android.telephony.ims.EMERGENCY_MMTEL_FEATURE" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.telephony.ims.ImsService"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name=".QtiImsExtService" android:permission="com.qti.permission.BIND_QTI_IMS_SERVICE" android:singleUser="true"/>
+        <uses-library android:name="qti-telephony-hidl-wrapper"/>
+        <uses-library android:name="qti-telephony-utils"/>
+        <uses-library android:name="ims-ext-common"/>
+    </application>
+</manifest>

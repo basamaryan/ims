@@ -1,0 +1,78 @@
+.class public final Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata$Builder;
+.super Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata;
+.source "Phonemetadata.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Builder"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 362
+    invoke-direct {p0}, Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public build()Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata;
+    .locals 0
+
+    .line 364
+    return-object p0
+.end method
+
+.method public setId(Ljava/lang/String;)Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata$Builder;
+    .locals 0
+    .param p1, "value"    # Ljava/lang/String;
+
+    .line 368
+    invoke-super {p0, p1}, Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata;->setId(Ljava/lang/String;)Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata;
+
+    .line 369
+    return-object p0
+.end method
+
+.method public bridge synthetic setId(Ljava/lang/String;)Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata;
+    .locals 0
+
+    .line 362
+    invoke-virtual {p0, p1}, Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata$Builder;->setId(Ljava/lang/String;)Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public setInternationalPrefix(Ljava/lang/String;)Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata$Builder;
+    .locals 0
+    .param p1, "value"    # Ljava/lang/String;
+
+    .line 373
+    invoke-super {p0, p1}, Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata;->setInternationalPrefix(Ljava/lang/String;)Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata;
+
+    .line 374
+    return-object p0
+.end method
+
+.method public bridge synthetic setInternationalPrefix(Ljava/lang/String;)Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata;
+    .locals 0
+
+    .line 362
+    invoke-virtual {p0, p1}, Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata$Builder;->setInternationalPrefix(Ljava/lang/String;)Lcom/google/i18n/phonenumbers/Phonemetadata$PhoneMetadata$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
