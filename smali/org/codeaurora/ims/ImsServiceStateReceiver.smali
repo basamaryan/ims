@@ -877,18 +877,7 @@
     .param p1, "isVideoCapable"    # Z
     .param p2, "isVoiceCapable"    # Z
 
-    .line 68
-    invoke-static {}, Landroid/telephony/TelephonyBaseUtilsStub;->isMiuiRom()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 69
-    return-void
-
     .line 72
-    :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
